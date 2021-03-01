@@ -1,0 +1,20 @@
+#btnregister {
+    margin-top: 2%;
+}
+
+#btnlogin {
+    margin-top: 2%;
+}
+
+#formlogin {
+    margin-top: 2%;
+}
+
+#formregister {
+    margin-top: 2%;
+    font-family: 'Franklin Gothic Medium';
+}
+
+input {
+    margin-bottom: 10%;
+}

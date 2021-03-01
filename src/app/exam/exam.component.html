@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-lg-8" *ngIf=value>
+        <div class="card bg-primary text-white" id="questioncard">
+            <div class="card-body">
+                <form class="form-group" #exam=ngForm (ngSubmit)="getexam(exam.value)">
+                    <h2><label>Exam No </label></h2>
+                    <input class="form-control" type="text" name="examno" placeholder="Enter Exam No " ngModel/>
+                    <h2> <label> ID</label></h2>
+                    <input class="form-control" type="text" name="sid" placeholder="Enter your ID" ngModel/>
+                    <input class="form-control" type="submit" value="submit" id="bt1" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12" *ngIf=status>
+        <div class="card bg-primary text-white" id="questioncard">
+            <div class="card-body">
+                <form>
+                    <h2> <label>Question :</label></h2>
+                    <h2>{{question}}</h2>
+                    <h2>Options:</h2>
+
+                    <ol>
+                        <h2>
+                            <li>
+                                {{option1}}
+                            </li>
+                        </h2>
+
+                        <h2>
+                            <li>
+                                {{option2}}
+                            </li>
+                        </h2>
+
+                        <h2>
+                            <li>
+                                {{option3}}
+                            </li>
+                        </h2>
+
+                        <h2>
+                            <li>
+                                {{option4}}
+                            </li>
+                        </h2>
+                    </ol>
+
+
+                    <h2><label>Asnwer</label></h2>
+                    <input class="form-control center" type="text" name="answer" placeholder="Example : Black" [(ngModel)]="ans" />
+                    <button class="btn btn-warning float-right" (click)="forwardaction()">Forward</button>
+                    <button class="btn btn-warning float-left" (click)="backwardaction()">Backword</button>
+                </form>
+
+            </div>
+            <button class="btn btn-danger" (click)="submitbutton()">submit exam</button>
+        </div>
+    </div>
+</div>

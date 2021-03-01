@@ -1,0 +1,89 @@
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+
+                <form class="form-group" #adduser="ngForm" (ngSubmit)="createuser(adduser.value)">
+                    <h2>New USer</h2>
+                    <label><h3>Username</h3></label>
+                    <input class="form-control" type="text" name="username" ngModel>
+                    <label><h3>Password</h3></label>
+                    <input class="form-control" type="text" name="password" ngModel>
+                    <label><h3>Designation</h3></label>
+                    <input class="form-control" type="text" name="designation" ngModel id="b1">
+
+                    <input class="form-control " type="submit" value="submit" id="b1" /> {{create}}
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #updateuser="ngForm" (ngSubmit)="updateauser(updateuser.value)">
+                    <h2>Update User</h2>
+                    <label><h3>Username</h3></label>
+                    <input class="form-control" type="text" name="username" ngModel>
+                    <label><h3>Password</h3></label>
+                    <input class="form-control" type="text" name="password" ngModel>
+                    <label><h3>Designation</h3></label>
+                    <input class="form-control" type="text" name="designation" ngModel>
+                    <label><h3>Id</h3></label>
+                    <input class="form-control" type="text" name="idu" ngModel>
+                    <input class="form-control" type="submit" value="submit" id="b2" /> {{update}}
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #deluser="ngForm" (ngSubmit)="deleteuser(deluser.value)">
+                    <h2>Delete User</h2>
+                    <label><h3>Id</h3></label>
+                    <input class="form-control" type="text" name="idu" ngModel>
+                    <input class="form-control" type="submit" value="submit" id="b3" /> {{delete}}
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #getuser="ngForm" (ngSubmit)="getoneuser(getuser.value)">
+                    <h2>Get One User</h2>
+                    <label><h3>Id</h3></label>
+                    <input class="form-control" type="text" name="idu" ngModel>
+                    <input class="form-control" type="submit" value="submit" id="b4" /> {{one}}
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #userall="ngForm" (ngSubmit)="getalluser(userall.value)">
+                    <h2>Get All User</h2>
+                    <label><h3>Designation</h3></label>
+                    <input class="form-control" type="text" name="profile" ngModel>
+                    <input class="form-control" type="submit" value="submit" id="b5" /> {{all}}
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</div>

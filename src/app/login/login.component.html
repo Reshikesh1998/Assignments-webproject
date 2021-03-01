@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-lg-6" id="formlogin" *ngIf=value1>
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <h2>Admin Login</h2>
+                <form class="form-group" #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+                    <label>Username</label>
+                    <input class="form-control" type="text" name="username" ngModel/>
+
+                    <label>Password</label>
+                    <input class="form-control" type="password" name="password" ngModel/>
+                    <input class="form-control" type="submit" id="btnlogin" />
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-6" id="formregister" *ngIf=value1>
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <h2>User Login</h2>
+                <form class="form-group" #uuserlogin="ngForm" (ngSubmit)="onClicklogin(uuserlogin.value)">
+                    <label>Username</label>
+                    <input class="form-control" type="text" name="uusername" ngModel/>
+
+                    <label>Password</label>
+                    <input class="form-control" type="password" name="upassword" ngModel/>
+
+                    <label>Designation</label>
+                    <input class="form-control" type="text" name="udesignation" ngModel/>
+
+                    <input class="form-control" type="submit" id="btnregister" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    {{mydata}}
+</div>

@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card bg-success text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #top="ngForm" (ngSubmit)="topstudent(top.value)">
+                    <h2>Get Top 5 Students</h2>
+                    <label>Id</label>
+                    <input class="form-control" type="text" name="id" placeholder="Enter if available" ngModel>
+                    <label>Name</label>
+                    <input class="form-control" type="text" name="name" placeholder="Enter your name" ngModel>
+                    <label>Email</label>
+                    <input class="form-control" type="text" name="email" placeholder="Enter your email" ngModel>
+                    <input class="form-control" type="submit" value="submit" />
+                </form>
+                {{tops}}
+            </div>
+
+        </div>
+    </div>
+</div>

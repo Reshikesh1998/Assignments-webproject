@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+
+                <form class="form-group" #addque="ngForm" (ngSubmit)="AddQuestion(addque.value)">
+                    <h2>New Question</h2>
+                    <label>Question</label>
+                    <input class="form-control" type="text" name="question" ngModel>
+                    <label>Option 1</label>
+                    <input class="form-control" type="text" name="q1" ngModel>
+                    <label>Option 2</label>
+                    <input class="form-control" type="text" name="q2" ngModel>
+                    <label>Option 3</label>
+                    <input class="form-control" type="text" name="q3" ngModel>
+                    <label>Option 4</label>
+                    <input class="form-control" type="text" name="q4" ngModel>
+                    <label>Answer</label>
+                    <input class="form-control" type="text" name="ans" ngModel>
+
+                    <input class="form-control" type="submit" value="submit" /> {{create}}
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #updatequestion="ngForm" (ngSubmit)="UpdateQuestion(updatequestion.value)">
+                    <h2>Question</h2>
+                    <label>Question No</label>
+                    <input class="form-control" type="text" name="qn" ngModel/>
+                    <label>Question</label>
+                    <input class="form-control" type="text" name="uq" ngModel/>
+                    <label>Option 1</label>
+                    <input class="form-control" type="text" name="uq1" ngModel/>
+                    <label>Option 2</label>
+                    <input class="form-control" type="text" name="uq2" ngModel/>
+                    <label>Option 3</label>
+                    <input class="form-control" type="text" name="uq3" ngModel/>
+                    <label>Option 4</label>
+                    <input class="form-control" type="text" name="uq4" ngModel/>
+                    <label>Answer</label>
+                    <input class="form-control" type="text" name="uans" ngModel/>
+                    <input class="form-control" type="submit" value="submit" />
+
+                </form>
+                {{update}}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #delquestion="ngForm" (ngSubmit)="DeleteQuestion(delquestion.value)">
+                    <h2>Delete Question</h2>
+                    <label>Qno</label>
+                    <input class="form-control" type="text" name="idd" ngModel>
+                    <input class="form-control" type="submit" value="submit" />
+                </form>
+                {{delete}}
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #getquestion="ngForm" (ngSubmit)="GetoneQuestion(getquestion.value)">
+                    <h2>Get One Question</h2>
+                    <label>Id</label>
+                    <input class="form-control" type="text" name="gid" ngModel>
+                    <input class="form-control" type="submit" value="submit" /> {{getonequest}}
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" id="studentcard">
+            <div class="card-body">
+                <form class="form-group" #getquestion="ngForm" (ngSubmit)="GetallQuestion(getquestion.value)">
+                    <h2>Get all Question</h2>
+
+                    <input class="form-control" type="submit" value="submit" />
+                    <ul>
+                        <li *ngFor="let user of getallquest">{{ user.Question }}</li>
+                    </ul>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
